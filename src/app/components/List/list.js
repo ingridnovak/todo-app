@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import Image from "next/image";
-import { useCreateTodo } from "../hooks/useCreateTodo";
-import { useDeleteTodo } from "../hooks/useDeleteTodo";
-import Pagination from "./pagination";
-import Create from "./create";
+import { useCreateTodo } from "../../../hooks/useCreateTodo";
+import { useDeleteTodo } from "../../../hooks/useDeleteTodo";
+import Pagination from "../Pagination/pagination";
+import Create from "../CreateToDo/create";
 
 const fetchList = async (page) => {
   const response = await fetch(

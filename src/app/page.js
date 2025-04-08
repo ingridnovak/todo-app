@@ -1,10 +1,11 @@
 "use client";
 import Image from "next/image";
-import List from "./list";
+import List from "./components/List/list";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import React from "react";
+import Footer from "./components/Footer/footer";
 
-export default function Home() {
+export default function Home({ auth, children }) {
   const queryClient = new QueryClient();
 
   return (
@@ -22,53 +23,7 @@ export default function Home() {
 
           <List />
         </main>
-        <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-          <a
-            className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-            href="/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              aria-hidden
-              src="/file.svg"
-              alt="File icon"
-              width={16}
-              height={16}
-            />
-            About
-          </a>
-          <a
-            className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-            href="/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              aria-hidden
-              src="/window.svg"
-              alt="Window icon"
-              width={16}
-              height={16}
-            />
-            Productivity tips
-          </a>
-          <a
-            className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-            href="/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              aria-hidden
-              src="/globe.svg"
-              alt="Globe icon"
-              width={16}
-              height={16}
-            />
-            Feedback →
-          </a>
-        </footer>
+        <Footer auth={auth} />
       </div>
     </QueryClientProvider>
   );
