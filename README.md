@@ -174,5 +174,3 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 - [Tailwind CSS Documentation](https://tailwindcss.com/docs)
 
 ---
-
-Let me know if you need further adjustments or additional sections!
